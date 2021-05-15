@@ -1,10 +1,22 @@
 {
-  "extends": ["react-app", "airbnb-typescript", "prettier"],
+  "extends": ["react-app", "airbnb-typescript", "plugin:i18next/recommended", "prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
-  }
+    "react/react-in-jsx-scope": "off",
+    "i18next/no-literal-string": [
+      "warn",
+      { "ignore": ["Pixous", "en"], "ignoreCallee": ["import.meta.glob", "import.meta.globEager"] }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["./src/lang/*"],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
+    }
+  ]
 }

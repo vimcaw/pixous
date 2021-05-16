@@ -9,9 +9,15 @@ import {
 } from '@adobe/react-spectrum';
 import Upload from '@spectrum-icons/illustrations/Upload';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import CreateDocument from './CreateDocument';
 
 export default function Home() {
   const { t } = useTranslation();
+  const [isCreatingDocument, setCreatingDocumentStatus] = useState(false);
+
+  if (isCreatingDocument)
+    return <CreateDocument onCancel={() => setCreatingDocumentStatus(false)} />;
 
   return (
     <View width="100vw" height="100vh" paddingX="size-600" paddingY="size-300">
@@ -28,7 +34,9 @@ export default function Home() {
             <Heading level={2}>{t('emptyTip')}</Heading>
             <Content marginTop="size-800">
               <ButtonGroup flexShrink={0}>
-                <Button variant="secondary">{t('newFile')}</Button>
+                <Button variant="secondary" onPress={() => setCreatingDocumentStatus(true)}>
+                  {t('newFile')}
+                </Button>
                 <Button variant="secondary">{t('openImage')}</Button>
               </ButtonGroup>
             </Content>

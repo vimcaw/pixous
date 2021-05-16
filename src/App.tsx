@@ -1,10 +1,8 @@
-import { Provider, darkTheme } from '@adobe/react-spectrum';
+import { useHasActiveDocument } from './store';
 import Home from './Home';
+import Editor from './Editor';
 
 export default function App() {
-  return (
-    <Provider theme={darkTheme}>
-      <Home />
-    </Provider>
-  );
+  const hasActiveDocument = useHasActiveDocument();
+  return hasActiveDocument ? <Editor /> : <Home />;
 }

@@ -6,9 +6,17 @@
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-param-reassign": "off",
     "i18next/no-literal-string": [
       "warn",
-      { "ignore": ["Pixous", "en"], "ignoreCallee": ["import.meta.glob", "import.meta.globEager"] }
+      {
+        "markupOnly": true,
+        "ignore": ["Pixous", "en"],
+        "ignoreCallee": ["import.meta.glob", "import.meta.globEager", "register"],
+        "ignoreAttribute": ["id", "name"]
+      }
     ]
   },
   "overrides": [

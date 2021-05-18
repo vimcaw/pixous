@@ -7,11 +7,11 @@ export default function DocumentWindow() {
 
   return (
     <Flex flexGrow={1} width={0} direction="column">
-      <View paddingX="size-200" paddingY="size-100">
+      <View backgroundColor="gray-300" paddingX="size-200" paddingY="size-100">
         {activeDocument.name}
       </View>
       <Canvas />
-      <View paddingX="size-100" paddingY="size-50">
+      <View backgroundColor="gray-300" paddingX="size-100" paddingY="size-50">
         {/* eslint-disable-next-line i18next/no-literal-string */}
         {activeDocument.size.width}×{activeDocument.size.height}
       </View>

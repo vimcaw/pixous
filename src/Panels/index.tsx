@@ -6,7 +6,7 @@ export default function Panels() {
   const activeLayerIds = useActiveLayerIds();
   return (
     <Flex flexShrink={0} direction="column" width="size-5000">
-      <View padding="size-200">
+      <View backgroundColor="gray-300" padding="size-100" flexGrow={1}>
         {activeLayerIds?.map(layerId => (
           <Layer key={layerId} id={layerId} />
         ))}

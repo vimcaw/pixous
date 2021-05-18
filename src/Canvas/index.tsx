@@ -26,7 +26,7 @@ export default function Canvas() {
               raf={false}
               renderOnComponentChange
               options={{
-                backgroundColor: 0x080808,
+                backgroundColor: 0x1e1e1e,
                 autoDensity: true,
                 resolution: window.devicePixelRatio,
               }}

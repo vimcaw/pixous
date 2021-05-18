@@ -1,7 +1,6 @@
 import { createEntityAdapter, EntityId, EntityState, nanoid } from '@reduxjs/toolkit';
-
 import { History } from './history';
-import layer, { LayerEntry } from './layer';
+import { getInitialLayer, LayerEntry } from './layer';
 
 export interface Size {
   width: number;
@@ -33,7 +32,7 @@ export function getInitialDocument(data: Pick<DocumentState, 'name' | 'size'>): 
     present: {
       state: {
         ...data,
-        layers: layer.getInitialState(),
+        layers: getInitialLayer(),
       },
       description: 'newFile',
     },

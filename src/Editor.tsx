@@ -1,12 +1,12 @@
-import { Flex, View } from '@adobe/react-spectrum';
-import { useActiveDocument } from './store';
+import { Flex } from '@adobe/react-spectrum';
+import DocumentWindow from './DocumentWindow';
+import Panels from './Panels';
 
 export default function Editor() {
-  const activeDocument = useActiveDocument()!;
-
   return (
-    <Flex>
-      <View>{activeDocument.name}</View>
+    <Flex width="100vw" height="100vh">
+      <DocumentWindow />
+      <Panels />
     </Flex>
   );
 }

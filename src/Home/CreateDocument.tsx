@@ -1,8 +1,8 @@
 import { Flex, ButtonGroup, Button } from '@adobe/react-spectrum';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Form, TextField, NumberField } from './components/Form';
-import { createNewDocument } from './store';
+import { Form, TextField, NumberField } from '@components/Form';
+import { createNewDocument } from '@store';
 
 export default function CreateDocument({ onCancel }: { onCancel?: () => void }) {
   const { t } = useTranslation();

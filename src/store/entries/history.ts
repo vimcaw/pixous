@@ -8,3 +8,5 @@ export interface History<State = any> {
   present: HistoryItem<State>;
   future: HistoryItem<State>[];
 }
+
+export const selectState = (rootState: History) => rootState.present.state;

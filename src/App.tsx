@@ -1,4 +1,4 @@
-import { useHasActiveDocument } from './store';
+import { useHasActiveDocument } from '@store';
 import Home from './Home';
 import Editor from './Editor';
 

@@ -9,4 +9,5 @@ export default {
   height: 'Height',
   create: 'Create',
   cancel: 'Cancel',
+  layer: 'Layer',
 };

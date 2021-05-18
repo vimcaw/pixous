@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { mapKeys, mapValues } from 'lodash';
-import en from './lang/en';
+import en from '@lang/en';
 
 const languages = import.meta.globEager('./lang/*.ts') as Record<string, { default: typeof en }>;
 

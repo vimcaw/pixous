@@ -9,4 +9,5 @@ export default {
   height: '高度',
   create: '新建',
   cancel: '取消',
+  layer: '图层',
 } as Translation;

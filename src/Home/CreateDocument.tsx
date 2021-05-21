@@ -1,24 +1,18 @@
 import { Flex, ButtonGroup, Button } from '@adobe/react-spectrum';
-import { useDispatch } from 'react-redux';
+import { observer } from 'mobx-react-lite';
 import { useTranslation } from 'react-i18next';
 import { Form, TextField, NumberField } from '@components/Form';
-import { createNewDocument } from '@store';
+import store from '@store';
 
-export default function CreateDocument({ onCancel }: { onCancel?: () => void }) {
+export default observer(({ onCancel }: { onCancel?: () => void }) => {
   const { t } = useTranslation();
-  const dispatch = useDispatch();
 
   return (
     <Flex direction="column" justifyContent="center" alignItems="center" height="100vh">
       <Form<{ name: string; width: number; height: number }>
         width="size-4000"
         onSubmit={values => {
-          dispatch(
-            createNewDocument({
-              name: values.name,
-              size: { width: values.width, height: values.height },
-            })
-          );
+          store.addDocument(values);
         }}
       >
         <TextField
@@ -40,4 +34,4 @@ export default function CreateDocument({ onCancel }: { onCancel?: () => void }) 
       </Form>
     </Flex>
   );
-}
+});

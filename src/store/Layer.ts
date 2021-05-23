@@ -6,6 +6,7 @@ const Layer = types
     name: types.string,
     visible: true,
     opacity: 1,
+    image: types.maybe(types.string),
   })
   .actions(self => ({
     setName(value: string) {

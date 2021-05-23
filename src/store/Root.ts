@@ -8,8 +8,14 @@ const Root = types
     documents: types.optional(types.array(Document), []),
   })
   .actions(self => ({
-    addDocument(document: Omit<IDocumentSnapshotOut, 'id' | 'layers'>) {
-      const newDocument = Document.create({ id: nanoid(), ...document });
+    addDocument(document: Omit<IDocumentSnapshotOut, 'id' | 'layers'> & { image?: string }) {
+      const newDocument = Document.create({
+        id: nanoid(),
+        ...document,
+        ...(document.image
+          ? { layers: [{ id: nanoid(), name: document.name, image: document.image }] }
+          : {}),
+      });
       self.documents.push(newDocument);
       self.activeDocument = newDocument;
     },

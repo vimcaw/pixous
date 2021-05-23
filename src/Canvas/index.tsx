@@ -1,10 +1,13 @@
 import { useMeasure } from 'react-use';
 import { Stage } from '@inlet/react-pixi';
 import { View } from '@adobe/react-spectrum';
+import { observer } from 'mobx-react-lite';
+import store from '@store';
 import Viewport from './Viewport';
 import Background from './Background';
+import Layer from './Layer';
 
-export default function Canvas() {
+export default observer(() => {
   const [ref, canvasContainerRect] = useMeasure();
 
   return (
@@ -30,9 +33,12 @@ export default function Canvas() {
         >
           <Viewport>
             <Background />
+            {store.activeDocument?.layers.map(layer => (
+              <Layer key={layer.id} layer={layer} />
+            ))}
           </Viewport>
         </Stage>
       )}
     </View>
   );
-}
+});

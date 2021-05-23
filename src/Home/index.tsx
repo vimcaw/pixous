@@ -9,12 +9,37 @@ import {
 } from '@adobe/react-spectrum';
 import Upload from '@spectrum-icons/illustrations/Upload';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import store from '@store';
 import CreateDocument from './CreateDocument';
 
 export default function Home() {
   const { t } = useTranslation();
   const [isCreatingDocument, setCreatingDocumentStatus] = useState(false);
+  const onPickFile = useCallback((event: Event) => {
+    const input = event.target;
+    if (!(input instanceof HTMLInputElement)) return;
+    const file = input.files?.[0];
+    if (!file) return;
+    const image = new Image();
+    const url = URL.createObjectURL(file);
+    image.src = url;
+    image.onload = () => {
+      store.addDocument({
+        name: file.name,
+        width: image.width,
+        height: image.height,
+        image: url,
+      });
+    };
+  }, []);
+  const [fileInput] = useState(() => {
+    const fileInputElement = document.createElement('input');
+    fileInputElement.type = 'file';
+    fileInputElement.accept = 'image/png,image/jpeg';
+    fileInputElement.onchange = onPickFile;
+    return fileInputElement;
+  });
 
   if (isCreatingDocument)
     return <CreateDocument onCancel={() => setCreatingDocumentStatus(false)} />;
@@ -37,7 +62,14 @@ export default function Home() {
                 <Button variant="secondary" onPress={() => setCreatingDocumentStatus(true)}>
                   {t('newFile')}
                 </Button>
-                <Button variant="secondary">{t('openImage')}</Button>
+                <Button
+                  variant="secondary"
+                  onPress={() => {
+                    fileInput.click();
+                  }}
+                >
+                  {t('openImage')}
+                </Button>
               </ButtonGroup>
             </Content>
           </IllustratedMessage>

@@ -62,5 +62,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vimcaw/pixelshop.git"
-  }
+  },
+  "license": "MIT"
 }

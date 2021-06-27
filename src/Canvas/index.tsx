@@ -4,6 +4,7 @@ import { View } from '@adobe/react-spectrum';
 import { observer } from 'mobx-react-lite';
 import store from '@store';
 import Viewport from './Viewport';
+import ContentContainer from './ContentContainer';
 import Background from './Background';
 import Layer from './Layer';
 
@@ -32,10 +33,12 @@ export default observer(() => {
           }}
         >
           <Viewport>
-            <Background />
-            {store.activeDocument?.layers.map(layer => (
-              <Layer key={layer.id} layer={layer} />
-            ))}
+            <ContentContainer>
+              <Background />
+              {store.activeDocument?.layers.map(layer => (
+                <Layer key={layer.id} layer={layer} />
+              ))}
+            </ContentContainer>
           </Viewport>
         </Stage>
       )}

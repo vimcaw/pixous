@@ -35,11 +35,7 @@ const PixiViewportComponent = PixiComponent<
       screenHeight: app.renderer.height / app.renderer.resolution,
       interaction: app.renderer.plugins.interaction,
     });
-
-    // 激活插件
     viewport.drag().pinch().wheel();
-
-    // 设置 viewport 默认中心和缩放
     viewport.moveCenter(0, 0);
     viewport.setZoom(1, true);
 
@@ -50,7 +46,6 @@ const PixiViewportComponent = PixiComponent<
       }
       requestAnimationFrame(() => update());
     }
-
     update();
 
     return viewport;

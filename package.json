@@ -1,6 +1,12 @@
 {
   "name": "pixous",
   "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vimcaw/pixelshop.git"
+  },
+  "private": "true",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -58,10 +64,5 @@
     "vite": "^2.3.0",
     "vite-aliases": "^0.6.3",
     "semantic-release": "^17.4.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vimcaw/pixelshop.git"
-  },
-  "license": "MIT"
+  }
 }

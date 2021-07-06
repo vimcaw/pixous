@@ -1,6 +1,7 @@
 import { types } from 'mobx-state-tree';
 import { nanoid } from 'nanoid';
 import Document, { IDocumentSnapshotOut } from '@store/Document';
+import ViewOptions from '@store/ViewOptions';
 
 const Root = types
   .model({
@@ -15,6 +16,7 @@ const Root = types
         ...(document.image
           ? { layers: [{ id: nanoid(), name: document.name, image: document.image }] }
           : {}),
+        viewOptions: ViewOptions.create(),
       });
       self.documents.push(newDocument);
       self.activeDocument = newDocument;

@@ -2,6 +2,7 @@ import { SnapshotOut, types } from 'mobx-state-tree';
 import Layer from '@store/Layer';
 import { nanoid } from 'nanoid';
 import i18next from 'i18next';
+import ViewOptions from '@store/ViewOptions';
 
 const Document = types
   .model({
@@ -12,6 +13,7 @@ const Document = types
     layers: types.optional(types.array(Layer), () => [
       { id: nanoid(), name: `${i18next.t('layer')} 1` },
     ]),
+    viewOptions: ViewOptions,
   })
   .actions(self => ({
     setName(value: string) {

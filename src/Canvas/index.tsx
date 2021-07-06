@@ -10,6 +10,7 @@ import Layer from './Layer';
 
 export default observer(() => {
   const [ref, canvasContainerRect] = useMeasure();
+  if (!store.activeDocument) throw new Error('Document not found');
 
   return (
     <View
@@ -32,10 +33,13 @@ export default observer(() => {
             resolution: window.devicePixelRatio,
           }}
         >
-          <Viewport>
+          <Viewport
+            scale={store.activeDocument.viewOptions.scale}
+            onZoomed={scale => store.activeDocument?.viewOptions.setScale(scale)}
+          >
             <ContentContainer>
               <Background />
-              {store.activeDocument?.layers.map(layer => (
+              {store.activeDocument.layers.map(layer => (
                 <Layer key={layer.id} layer={layer} />
               ))}
             </ContentContainer>

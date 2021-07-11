@@ -13,6 +13,7 @@ import {
 } from 'react';
 import { observer } from 'mobx-react-lite';
 import store from '@store';
+import fitContentToViewport from '@utils/fitContentToViewport';
 
 const ViewportContext = createContext<PixiViewport | null>(null);
 
@@ -81,6 +82,11 @@ export default observer(
         setViewportInstance(currentViewportInstance as PixiViewport);
       }
     }, []);
+
+    useEffect(() => {
+      if (!viewportInstance || !store.activeDocument) return;
+      fitContentToViewport(viewportInstance);
+    }, [viewportInstance]);
 
     const clampZoomOptions = useMemo<IClampZoomOptions | undefined>(() => {
       if (!store.activeDocument) return undefined;

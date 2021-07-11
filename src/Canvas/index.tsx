@@ -1,4 +1,5 @@
 import { useMeasure } from 'react-use';
+import { settings, SCALE_MODES } from 'pixi.js';
 import { Stage } from '@inlet/react-pixi';
 import { View } from '@adobe/react-spectrum';
 import { observer } from 'mobx-react-lite';
@@ -7,6 +8,8 @@ import Viewport from './Viewport';
 import ContentContainer from './ContentContainer';
 import Background from './Background';
 import Layer from './Layer';
+
+settings.SCALE_MODE = SCALE_MODES.NEAREST;
 
 export default observer(() => {
   const [ref, canvasContainerRect] = useMeasure();

@@ -10,4 +10,5 @@ export default {
   create: '新建',
   cancel: '取消',
   layer: '图层',
+  close: '关闭',
 } as Translation;

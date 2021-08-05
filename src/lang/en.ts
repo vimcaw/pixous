@@ -10,4 +10,5 @@ export default {
   create: 'Create',
   cancel: 'Cancel',
   layer: 'Layer',
+  close: 'Close',
 };

@@ -21,6 +21,13 @@ const Root = types
       self.documents.push(newDocument);
       self.activeDocument = newDocument;
     },
+    closeDocument() {
+      if (!self.activeDocument) return;
+      const index = self.documents.indexOf(self.activeDocument);
+      self.activeDocument = undefined;
+      if (!index) return;
+      self.documents.splice(index, 1);
+    },
   }));
 
 export default Root;

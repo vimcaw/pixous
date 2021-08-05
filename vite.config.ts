@@ -1,13 +1,10 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
-import { getAliases } from 'vite-aliases';
+import { ViteAliases } from 'vite-aliases';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh()],
-  resolve: {
-    alias: getAliases(),
-  },
+  plugins: [reactRefresh(), ViteAliases()],
   server: {
     open: true,
   },

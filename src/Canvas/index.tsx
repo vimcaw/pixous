@@ -13,7 +13,7 @@ settings.SCALE_MODE = SCALE_MODES.NEAREST;
 
 export default observer(() => {
   const [ref, canvasContainerRect] = useMeasure();
-  if (!store.activeDocument) throw new Error('Document not found');
+  if (!store.activeDocument) return null;
 
   return (
     <View

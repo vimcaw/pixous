@@ -6,11 +6,11 @@ import store from '@store';
 import canvasInstances from '@utils/canvasInstances';
 
 export default observer(({ children }: { children?: ReactNode }) => {
-  if (!store.activeDocument) throw new Error();
   const [mask, maskRef] = useState<PixiGraphics | null>(null);
   const containerRef = useCallback<RefCallback<PixiContainer>>(instance => {
     canvasInstances.contentContainer = instance;
   }, []);
+  if (!store.activeDocument) return null;
 
   return (
     <Container

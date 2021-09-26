@@ -504,10 +504,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@inlet/react-pixi@^6.6.4":
-  version "6.6.4"
-  resolved "https://registry.yarnpkg.com/@inlet/react-pixi/-/react-pixi-6.6.4.tgz#dccc7022b408dd97972d51c90457511eb412af85"
-  integrity sha512-V4a9Or1oxK+HK0fEHT9h+p96eAaXy5+x8/+NBBWJd+s0wUj48Zbe24gI9Fn+qDKX7ctZst3jvIEz/e2knk8ZOw==
+"@inlet/react-pixi@^6.6.5":
+  version "6.6.5"
+  resolved "https://registry.yarnpkg.com/@inlet/react-pixi/-/react-pixi-6.6.5.tgz#46c8986b3e7fd3ec83198260cd03ac78e3319009"
+  integrity sha512-xflQcnxHtf/wlSAaFSk4r6ePGwe4iRRkMceYRqbweTTKfJEudN5LksxDbxpuNPm9vw6DqFKnOtUXG1Qa1ZmNjg==
 
 "@internationalized/message@^3.0.2":
   version "3.0.2"

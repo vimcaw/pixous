@@ -22,7 +22,7 @@
     "@spectrum-icons/illustrations": "^3.2.2",
     "@spectrum-icons/workflow": "^3.2.1",
     "@types/lodash": "^4.14.173",
-    "i18next": "^20.3.5",
+    "i18next": "^21.1.1",
     "i18next-browser-languagedetector": "^6.1.2",
     "lodash": "^4.17.21",
     "mobx": "^6.3.3",

@@ -4,6 +4,13 @@ dist
 dist-ssr
 *.local
 
-# Ignore editor files
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/report.*
+debug.log
+
+# Editor files
 .vscode
 .idea

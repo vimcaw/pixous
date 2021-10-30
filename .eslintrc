@@ -1,5 +1,11 @@
 {
-  "extends": ["react-app", "airbnb-typescript", "plugin:i18next/recommended", "prettier"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:i18next/recommended",
+    "prettier"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },

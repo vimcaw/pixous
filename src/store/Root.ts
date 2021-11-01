@@ -9,7 +9,9 @@ const Root = types
     documents: types.optional(types.array(Document), []),
   })
   .actions(self => ({
-    addDocument(document: Omit<IDocumentSnapshotOut, 'id' | 'layers'> & { image?: string }) {
+    addDocument(
+      document: Pick<IDocumentSnapshotOut, 'name' | 'width' | 'height'> & { image?: string }
+    ) {
       const newDocument = Document.create({
         id: nanoid(),
         ...document,

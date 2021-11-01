@@ -101,7 +101,7 @@ export function TextField(
 export function NumberField(
   props: UseControllerProps & RegisterOptions & Omit<SpectrumNumberFieldProps, 'isRequired'>
 ) {
-  const { controllerProps, fieldProps } = useField({ ...props, valueAsNumber: true });
+  const { controllerProps, fieldProps } = useField(props);
 
   return (
     <Controller

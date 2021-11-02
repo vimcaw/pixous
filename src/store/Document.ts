@@ -11,7 +11,7 @@ const Document = types
     width: types.number,
     height: types.number,
     layers: types.optional(types.array(Layer), () => [
-      { id: nanoid(), name: `${i18next.t('layer')} 1` },
+      { id: nanoid(), name: `${i18next.t('layer')} 1`, fill: 0xffffff },
     ]),
     viewOptions: ViewOptions,
   })

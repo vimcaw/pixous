@@ -22,7 +22,7 @@
         "markupOnly": true,
         "ignore": ["Pixous", "en"],
         "ignoreCallee": ["import.meta.glob", "import.meta.globEager", "register"],
-        "ignoreAttribute": ["id", "name"]
+        "onlyAttribute": ["title"]
       }
     ]
   },

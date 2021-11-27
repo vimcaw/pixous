@@ -5,7 +5,7 @@ import ViewOptions from '@store/ViewOptions';
 
 const Root = types
   .model({
-    activeDocument: types.optional(types.maybe(types.reference(Document)), undefined),
+    activeDocument: types.maybe(types.reference(Document)),
     documents: types.optional(types.array(Document), []),
   })
   .actions(self => ({

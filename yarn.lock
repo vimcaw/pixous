@@ -5851,10 +5851,10 @@ mobx-state-tree@^5.0.4:
   resolved "https://registry.yarnpkg.com/mobx-state-tree/-/mobx-state-tree-5.0.4.tgz#b2628436915f5eba125cc9d2bc8bc3ad58b8762c"
   integrity sha512-YJnjW4hy5+kcbZdRJAmqK2HrRYl2Xjh66dVRlNRBknJiNHzYvQ5qKFp096jXlP/0XWu5T3yn5JBgnLeGbGTVKA==
 
-mobx@^6.3.5:
-  version "6.3.5"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.5.tgz#4464565bf2fa0f74f5dc2e4d6a9713bcee0ddf9c"
-  integrity sha512-MeDfqtiSbhVoJgXqQsrJwvq2klj7Xk9pPdMThCdFiwFt33vgWJe82ATppPwVzQoz0AI3QpSSwQzcp3TBDK4syg==
+mobx@^6.3.10:
+  version "6.3.10"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.10.tgz#c3bc715c8f03717b9a2329f9697d42b7998d42e0"
+  integrity sha512-lfuIN5TGXBNy/5s3ggr1L+IbD+LvfZVlj5q1ZuqyV9AfMtunYQvE8G0WfewS9tgIR3I1q8HJEEbcAOsxEgLwRw==
 
 modify-values@^1.0.0:
   version "1.0.1"

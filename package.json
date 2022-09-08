@@ -25,7 +25,7 @@
     "i18next": "^21.3.3",
     "i18next-browser-languagedetector": "^6.1.2",
     "lodash": "^4.17.21",
-    "mobx": "^6.3.5",
+    "mobx": "^6.6.2",
     "mobx-react-lite": "^3.2.1",
     "mobx-state-tree": "^5.0.4",
     "nanoid": "^3.1.30",

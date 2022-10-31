@@ -60,7 +60,7 @@
     "sass": "^1.43.4",
     "semantic-release": "^18.0.0",
     "typescript": "^4.4.4",
-    "vite": "^2.6.13",
+    "vite": "^3.2.1",
     "vite-aliases": "^0.8.7"
   }
 }

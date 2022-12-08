@@ -21,7 +21,7 @@
     "@inlet/react-pixi": "^6.6.5",
     "@spectrum-icons/illustrations": "^3.2.2",
     "@spectrum-icons/workflow": "^3.2.1",
-    "@types/lodash": "^4.14.176",
+    "@types/lodash": "^4.14.191",
     "i18next": "^21.3.3",
     "i18next-browser-languagedetector": "^6.1.2",
     "lodash": "^4.17.21",

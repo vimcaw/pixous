@@ -17,7 +17,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@adobe/react-spectrum": "^3.14.1",
+    "@adobe/react-spectrum": "^3.24.0",
     "@inlet/react-pixi": "^6.6.5",
     "@spectrum-icons/illustrations": "^3.2.2",
     "@spectrum-icons/workflow": "^3.2.1",
